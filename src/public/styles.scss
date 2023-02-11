@@ -1,0 +1,388 @@
+:root{
+    --width:300px;
+    --padding:10px;
+    --bgcolor:rgb(20, 19, 19);
+    --hovercolor:rgb(51, 51, 56);
+    --width-collapse:50px;
+}
+
+body{
+    height: 100vh;
+    background-color: antiquewhite;
+    font-family: 'Gruppo', cursive;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    margin-left: var(--width-collapse);
+    background-image: url("https://hub.packtpub.com/wp-content/uploads/2018/05/functional-programming-2.jpg");
+    background-attachment: locaL;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sidemenu{
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    // background-color: var(--bgcolor);
+    a{
+        color: white;
+        text-decoration: none;
+    }
+}
+
+#main-container{
+    color: blue($color: #18216b);
+    height: 50%;
+    border: solid 1px red;
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 17px );
+    -webkit-backdrop-filter: blur( 17px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    margin-top: 48px;
+    margin-left: 48px;
+    margin-right: 48px;
+    .article-main-container{
+        display:flex ;
+        height: 50vh;
+        .main-photo{
+            width: 30%;
+            img{
+               width: 100%;
+               height: 100%;
+               object-fit:cover;
+                
+                
+            }
+        }
+        .main-p{
+            width: 60%;
+            padding-right: 4%;
+            padding-left: 2%;
+            text-align:left;
+            overflow: hidden;
+            h1{
+                font-size: 2.5rem;
+            }
+            p{
+                overflow: hidden;
+                font-size: 1.5rem;
+                color: #262626;
+                font-weight: 500;
+            }
+        }
+    }
+}
+#technology{
+    // background: rgba( 255, 255, 255, 0.35 );
+    // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    // backdrop-filter: blur( 17px );
+    // -webkit-backdrop-filter: blur( 17px );
+    // border-radius: 10px;
+    // border: 1px solid rgba( 255, 255, 255, 0.18 );
+    
+    margin-top: 80px;
+    margin-left: 48px;
+    margin-right: 48px;
+    height: 20%;
+    z-index: 2;
+    div{
+        text-align: center;
+       padding-top: 2%;
+    }
+}
+
+.body-expanded{
+    margin-left: var(--width);
+}
+
+// header
+
+#sidemenu #header{
+    box-sizing: border-box;
+    border-bottom: solid 1px var(--hovercolor);
+    #title{
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+}
+
+#sidemenu #header #title , #sidemenu #header #menu-btn{
+    vertical-align: middle;
+}
+
+#sidemenu #header #menu-btn{
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+    width: var(--width-collapse);
+    box-sizing: border-box;
+}
+
+#sidemenu #header #menu-btn:hover{
+    background-color: var(--hovercolor);
+}
+
+#sidemenu #header #menu-btn .menu-hamburguesa{
+    background-color:#262626;
+    width: 100%;
+    height: 3px;
+    margin: 5px 0;
+    border-radius: 16px;
+}
+
+// profile
+
+#sidemenu #profile{
+    border-bottom: solid 1px var(--hovercolor);
+    padding: var(--padding) 0;
+    text-align: center;
+    #photo{
+        box-sizing: border-box;
+        padding: var(--padding);
+        margin: 0 auto ;
+        width: 60%;
+        
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+        }
+    }
+
+    #name{
+        font-size: 24px;
+        padding: var(--padding) 0;
+        overflow: hidden;
+        color: var(--hovercolor);
+    }
+}
+
+
+// items
+
+#sidemenu #menu-items{
+    overflow: hidden;
+    margin-top: 10px;
+    
+    .item{
+        width: 100%;
+       
+        a{
+            
+            width: 100%;
+        }
+        .icon{
+            display: inline-block;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+#sidemenu #menu-items .item .title{
+    padding: var(--padding) 0;
+ 
+}
+
+
+#sidemenu #menu-items .item .icon, #sidemenu #menu-items .item .title{
+    font-size: 14px;
+    vertical-align: middle;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#sidemenu #menu-items .item:hover{
+background-color: var(--hovercolor);
+}
+
+#menu-items .item-separator{
+    height: 1px;
+    border-bottom: solid 1px var(--hovercolor);
+    margin: 15px 0;
+}
+
+
+
+.menu-expanded{
+    width: var(--width);
+    box-shadow: 0 0 10px rgba($color: #585454, $alpha: 1.0);
+    z-index: 10;
+    background-color: #bbd1d5;
+    box-shadow: 0 8px 32px 0 rgba(97, 97, 99, 0.37);
+    backdrop-filter: blur( 16.5px );
+    -webkit-backdrop-filter: blur( 16.5px );
+}
+
+.menu-expanded #header #title{
+    display: inline-block;
+    width: calc(100% - 50px);
+    margin-right: -5px;
+    padding: var(--padding);
+    span{
+        width: calc(var(--width) - var(--width-collapse) - 5px);
+        overflow: hidden;
+        color: white;
+    }
+}
+
+
+.menu-expanded #profile #photo {
+    width: 200px;
+}
+
+.menu-expanded #profile #name{
+    width: 100%;
+}
+
+.menu-collapsed{
+    width: var(--width-collapse);
+    background-color:#bbd1d5;
+    box-shadow: 0 8px 32px 0 rgba(97, 97, 99, 0.37);
+    backdrop-filter: blur( 16.5px );
+    -webkit-backdrop-filter: blur( 16.5px );
+    
+
+}
+
+.menu-collapsed #header #title{
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+
+.menu-collapsed #profile #name {
+    display: none;
+}
+
+.menu-collapsed .item{
+    width: 100%;
+    .title{
+        display: none !important;
+    }
+   
+}
+
+
+.body-projects{
+    
+    background-repeat: repeat;
+    background-attachment:fixed;
+  
+}
+
+#projects{
+    h1{
+        text-align: center;
+        font-weight: 900;
+        font-size: 4rem;
+    }
+    p{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    margin-top: 1vh;
+    margin-left: 48px;
+    margin-right: 48px;
+    .cards-projects{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        .card{
+            width: 30%;
+            margin-bottom: 2rem;
+            background: rgba( 255, 255, 255, 0.25 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 20px );
+            -webkit-backdrop-filter: blur( 20px );
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            img{
+                width: 100%;
+            }
+            p{
+                padding: 1rem;
+                text-align: left;
+            }
+        }
+    }
+}
+
+
+.form-contact{
+    
+    margin-left: 48px;
+    margin-right: 48px; 
+    height: 100vh;
+
+    h1{
+        text-align: center;
+        font-size:4rem;
+    }
+    
+    div{
+        margin-top: 10%;
+        height: 70%;
+      
+        form{
+            display: flex;
+            flex-direction: column;
+            padding-left: 25%;
+            width: 50%;
+            align-items: left;
+           input{
+            height: 2rem;
+            margin-bottom: 20px;
+            background: rgba( 255, 255, 255, 0.25 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 20px );
+            -webkit-backdrop-filter: blur( 20px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+           }
+
+           input::placeholder{
+           padding-left: 1rem;
+           font-size: 1rem;
+           }
+
+
+           textarea{
+            height: 30vh;
+            margin-bottom: 20px;
+            background: rgba( 255, 255, 255, 0.25 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 20px );
+            -webkit-backdrop-filter: blur( 20px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+           }
+
+           textarea::placeholder{
+            padding-left: 1rem;
+            font-size: 1rem;
+           }
+
+           button{
+            height: 2rem;
+            margin-bottom: 20px;
+            background: rgba( 255, 255, 255, 0.25 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 20px );
+            -webkit-backdrop-filter: blur( 20px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            font-size: 1rem;
+           }
+        }
+    }
+}

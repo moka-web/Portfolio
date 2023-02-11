@@ -37,7 +37,7 @@ router.post('/send-email', async (req,res)=>{
                  console.log(info.messageId)
 
 
-    res.send('received')
+    res.redirect("/")
 })
 
 

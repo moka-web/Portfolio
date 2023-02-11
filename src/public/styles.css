@@ -283,6 +283,10 @@ body {
   text-align: left;
   overflow: hidden;
 }
+#projects .cards-projects .card a {
+  color: #262626;
+  padding: 2%;
+}
 
 .form-contact {
   margin-left: 48px;

@@ -16,7 +16,7 @@ body{
     margin: 0;
     margin-left: var(--width-collapse);
     background-image: url("https://hub.packtpub.com/wp-content/uploads/2018/05/functional-programming-2.jpg");
-    background-attachment: locaL;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -295,9 +295,10 @@ background-color: var(--hovercolor);
     margin-right: 48px;
     .cards-projects{
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap:wrap;
         justify-content: space-between;
         width: 100%;
+        overflow: hidden;
         .card{
             width: 30%;
             margin-bottom: 2rem;
@@ -310,8 +311,9 @@ background-color: var(--hovercolor);
                 width: 100%;
             }
             p{
-                padding: 1rem;
+                padding: 1vw;
                 text-align: left;
+                overflow: hidden;
             }
         }
     }
@@ -383,6 +385,61 @@ background-color: var(--hovercolor);
             border: 1px solid rgba( 255, 255, 255, 0.18 );
             font-size: 1rem;
            }
+        }
+    }
+}
+
+
+@media (max-width:780px){
+
+
+    #main-container{
+        color: blue($color: #18216b);
+        height: 50vh;
+        background: rgba( 255, 255, 255, 0.35 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 17px );
+        -webkit-backdrop-filter: blur( 17px );
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        margin-top: 48px;
+        margin-left: 48px;
+        margin-right: 48px;
+        .article-main-container{
+            display:flex ;
+            height: 60vh;
+            .main-photo{
+                display: none;
+            }
+            .main-p{
+                width: 100%;
+                padding-right: 4%;
+                padding-left: 2%;
+                text-align:left;
+                overflow: hidden;
+                h1{
+                    font-size: 5vw;
+                }
+                p{
+                    overflow: hidden;
+                    font-size: 3.5vw;
+                    color: #262626;
+                    font-weight: 500;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+
+    .cards-projects{
+        display: flex;
+        flex-direction: column;
+        flex-wrap:wrap;
+        justify-content: space-between;
+        width: 100%;
+        overflow: hidden;
+        .card{
+            width: 100% !important;
+            
         }
     }
 }

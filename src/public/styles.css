@@ -16,7 +16,7 @@ body {
   margin: 0;
   margin-left: var(--width-collapse);
   background-image: url("https://hub.packtpub.com/wp-content/uploads/2018/05/functional-programming-2.jpg");
-  background-attachment: locaL;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -264,6 +264,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
+  overflow: hidden;
 }
 #projects .cards-projects .card {
   width: 30%;
@@ -278,8 +279,9 @@ body {
   width: 100%;
 }
 #projects .cards-projects .card p {
-  padding: 1rem;
+  padding: 1vw;
   text-align: left;
+  overflow: hidden;
 }
 
 .form-contact {
@@ -340,6 +342,56 @@ body {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   font-size: 1rem;
+}
+
+@media (max-width: 780px) {
+  #main-container {
+    color: 107;
+    height: 50vh;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(17px);
+    -webkit-backdrop-filter: blur(17px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    margin-top: 48px;
+    margin-left: 48px;
+    margin-right: 48px;
+  }
+  #main-container .article-main-container {
+    display: flex;
+    height: 60vh;
+  }
+  #main-container .article-main-container .main-photo {
+    display: none;
+  }
+  #main-container .article-main-container .main-p {
+    width: 100%;
+    padding-right: 4%;
+    padding-left: 2%;
+    text-align: left;
+    overflow: hidden;
+  }
+  #main-container .article-main-container .main-p h1 {
+    font-size: 5vw;
+  }
+  #main-container .article-main-container .main-p p {
+    overflow: hidden;
+    font-size: 3.5vw;
+    color: #262626;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  .cards-projects {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+  }
+  .cards-projects .card {
+    width: 100% !important;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

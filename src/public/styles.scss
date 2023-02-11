@@ -435,16 +435,102 @@ background-color: var(--hovercolor);
         }
     }
 
-    .cards-projects{
-        display: flex;
-        flex-direction: column;
-        flex-wrap:wrap;
-        justify-content: space-between;
-        width: 100%;
-        overflow: hidden;
-        .card{
-            width: 100% !important;
-            
+   
+
+    #projects{
+        h1{
+            text-align: center;
+            font-weight: 900;
+            font-size: 2rem;
+        }
+        p{
+            text-align: center;
+            font-size: 1rem;
+        }
+        margin-top: 1vh;
+        margin-left: 48px;
+        margin-right: 48px;
+        .cards-projects{
+            display: flex;
+            flex-direction: column;
+            flex-wrap:wrap;
+            justify-content: space-between;
+            width: 100%;
+            overflow: hidden;
+            .card{
+                width: 100% !important;
+                
+            }
         }
     }
+
+    
+.form-contact{
+    
+    margin-left: 48px;
+    margin-right: 48px; 
+    height: 100vh;
+
+    h1{
+        text-align: center;
+        font-size:2rem;
+    }
+    
+    div{
+        margin-top: 10%;
+        height: 70%;
+      
+        form{
+            display: flex;
+            flex-direction: column;
+            padding-left: 0;
+            width: 100%;
+            align-items: left;
+           input{
+            height: 2rem;
+            margin-bottom: 20px;
+            background: rgba( 255, 255, 255, 0.25 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 20px );
+            -webkit-backdrop-filter: blur( 20px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+           }
+
+           input::placeholder{
+           padding-left: 1rem;
+           font-size: 1rem;
+           }
+
+
+           textarea{
+            height: 30vh;
+            margin-bottom: 20px;
+            background: rgba( 255, 255, 255, 0.25 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 20px );
+            -webkit-backdrop-filter: blur( 20px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+           }
+
+           textarea::placeholder{
+            padding-left: 1rem;
+            font-size: 1rem;
+           }
+
+           button{
+            height: 2rem;
+            margin-bottom: 20px;
+            background: rgba( 255, 255, 255, 0.25 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 20px );
+            -webkit-backdrop-filter: blur( 20px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            font-size: 1rem;
+           }
+        }
+    }
+}
 }

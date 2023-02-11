@@ -385,7 +385,21 @@ body {
     font-weight: 500;
     margin-bottom: 1rem;
   }
-  .cards-projects {
+  #projects {
+    margin-top: 1vh;
+    margin-left: 48px;
+    margin-right: 48px;
+  }
+  #projects h1 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 2rem;
+  }
+  #projects p {
+    text-align: center;
+    font-size: 1rem;
+  }
+  #projects .cards-projects {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -393,8 +407,67 @@ body {
     width: 100%;
     overflow: hidden;
   }
-  .cards-projects .card {
+  #projects .cards-projects .card {
     width: 100% !important;
+  }
+  .form-contact {
+    margin-left: 48px;
+    margin-right: 48px;
+    height: 100vh;
+  }
+  .form-contact h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .form-contact div {
+    margin-top: 10%;
+    height: 70%;
+  }
+  .form-contact div form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    width: 100%;
+    align-items: left;
+  }
+  .form-contact div form input {
+    height: 2rem;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  .form-contact div form input::placeholder {
+    padding-left: 1rem;
+    font-size: 1rem;
+  }
+  .form-contact div form textarea {
+    height: 30vh;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  .form-contact div form textarea::placeholder {
+    padding-left: 1rem;
+    font-size: 1rem;
+  }
+  .form-contact div form button {
+    height: 2rem;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    font-size: 1rem;
   }
 }
 
